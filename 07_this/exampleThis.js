@@ -32,3 +32,16 @@ function Person(name) {
 
 const john = new Person("John");
 console.log(john.sayHi()); // {name: "John", sayHi: ƒ}
+
+// 5. this in event listener
+
+const button = document.querySelector("button");
+button.addEventListener("click", function () {
+  console.log(this); // <button>Click me</button>
+});
+
+// 6. this in arrow function
+
+const arrowFunction = () => {
+  return this;
+};
